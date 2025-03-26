@@ -1,0 +1,9 @@
+{
+	"_id": "hero_1",
+	"title": "Bienvenido a Astro Landing",
+	"subtitle": "Una plantilla totalmente personalizable y lista para usar.",
+	"cta": {
+		"text": "Empezar Ahora",
+		"link": "#features"
+	}
+}
