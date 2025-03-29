@@ -1,24 +1,26 @@
+---
+import { Menu } from '@data/menu.ts';
+import Logo from '@assets/svg/logo.svg';
+---
+
 <header class="header shadow">
-    <div class="wrapper flex items-center justify-between container mx-auto">
+    <div class="wrapper flex items-center justify-between container mx-auto py-4">
         <div class="logo">
             <a href="http://">
-                <img src="http://placehold.it/100x50" alt="logo" width="100" height="50" />
+               <Logo class="aspect-square" />
             </a>
         </div>
         <nav class="nav">
             <ul class="flex">
-                <li>
-                    <a href="http://" class="hover:bg-amber-300 active:bg-amber-300 p-2">Home</a>
-                </li>
-                <li>
-                    <a href="http://" class="hover:bg-amber-300 active:bg-amber-300 p-2">Features</a>
-                </li>
-                <li>
-                    <a href="http://" class="hover:bg-amber-300 active:bg-amber-300 p-2">About</a>
-                </li>
-                <li>
-                    <a href="http://" class="hover:bg-amber-300 active:bg-amber-300 p-2">Contact</a>
-                </li>
+                {
+                    Menu.map((item)=>{
+                        return (
+                            <li>
+                                <a href={item.link} class="hover:bg-amber-300 active:bg-amber-300 p-2">{item.name}</a>
+                            </li>
+                        )
+                    })
+                }
             </ul>
         </nav>
     </div>
