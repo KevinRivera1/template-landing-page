@@ -2,10 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Landing Page - Template Desing</title>
+		<link rel="icon" type="image/svg+xml" href="src/assets/svg/logo.svg" />
 	</head>
 	<body>
 		<slot />
@@ -13,10 +12,30 @@
 </html>
 
 <style>
+	:where(*) {
+    margin        : 0;
+    padding       : 0;
+    border        : 0;
+    box-sizing    : border-box;
+    vertical-align: baseline;
+}
+
+:where(html) {
+    font-size      : 100%;
+    scroll-behavior: smooth;
+}
 	html,
 	body {
 		margin: 0;
 		width: 100%;
 		height: 100%;
 	}
+
+	:where(img, picture, video, iframe, figure) {
+    max-width      : 100%;
+    height         : auto;
+    display        : block;
+    object-fit     : cover;
+    object-position: center;
+}
 </style>
