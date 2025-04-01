@@ -11,6 +11,7 @@
 		"check": "bunx biome check --write ."
 	},
 	"dependencies": {
+		"@fontsource-variable/onest": "^5.2.7",
 		"astro": "^5.5.5"
 	},
 	"devDependencies": {
