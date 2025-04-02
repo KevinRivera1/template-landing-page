@@ -9,6 +9,6 @@ export default defineConfig({
 	experimental: {
 		svg: {
 			mode: 'sprite',
-		  }
-	  },
+		},
+	},
 });
