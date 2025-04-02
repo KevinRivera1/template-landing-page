@@ -10,6 +10,7 @@
 			"@features/*": ["features/*"],
 			"@layouts/*": ["layouts/*"],
 			"@pages/*": ["pages/*"],
+			"@components/*": ["components/*"],
 			"@shared/*": ["shared/*"],
 			"@styles/*": ["styles/*"]
 		}

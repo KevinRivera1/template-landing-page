@@ -1,0 +1,90 @@
+---
+import Logo from '@assets/svg/logo.svg';
+import { Menu } from '@data/menu.ts';
+---
+
+<header class="header relative text-blue-700">
+    <div class="header-wrapper flex items-center justify-between container mx-auto p-4 lg:px-0 border-b border-blue-700">
+        <div class="logo">
+            <a href="http://" aria-label="Logo" />
+               <Logo class="aspect-square h-6" />
+            </a>
+        </div>
+        <nav class="nav hidden lg:block font-medium">
+            <ul class="nav-items flex">
+                {Menu.map((item) => (
+                    <li class="nav-item relative">
+                        <a href={item.link} aria-label={item.name} class="nav-item-link p-2 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[.125rem] after:bg-blue-700 after:transition-all after:duration-300 hover:after:w-full">
+                            {item.name}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </nav>
+        <button id="btn-mobile-open" class="lg:hidden cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-align-right">
+                <path d="M21 12H9"/><path d="M21 18H7"/><path d="M21 6H3"/>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<!-- Menú móvil -->
+<nav id="nav-mobile" class="nav-mobile fixed top-0 right-0 z-40 text-blue-700 bg-white w-40 h-full rounded-l-xl shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
+    <div class="bnt-close flex justify-end p-4">
+        <button id="btn-mobile-close" class="lg:hidden cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-x-icon lucide-circle-x"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
+        </button>
+    </div>
+    <div class="h-full w-full flex flex-col justify-center items-center">
+        <ul class="nav-items flex justify-center items-center flex-col gap-4">
+            {Menu.map((item) => (
+                <li class="nav-item relative">
+                    <a href={item.link} class="nav-item-link p-2 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[.125rem] after:bg-blue-700 after:transition-all after:duration-300 hover:after:w-full active:after:w-full">
+                        {item.name}
+                    </a>
+                </li>
+            ))}
+        </ul>
+    </div>
+</nav>
+
+<script>
+    const btnMobile = document.getElementById('btn-mobile-open') as HTMLButtonElement;
+    const btnMobileClose = document.getElementById('btn-mobile-close') as HTMLButtonElement;
+    const navMobile = document.getElementById('nav-mobile') as HTMLDivElement;
+
+    btnMobile.addEventListener('click', () => {
+        navMobile.classList.toggle('translate-x-0');
+        navMobile.classList.toggle('translate-x-full');
+    });
+
+    btnMobileClose.addEventListener('click', () => {
+        navMobile.classList.toggle('translate-x-0');
+        navMobile.classList.toggle('translate-x-full');
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 1024) {
+            navMobile.classList.add('translate-x-full');
+            navMobile.classList.remove('translate-x-0');
+        }
+    });
+
+    document.addEventListener('click', (event) => {
+        const isClickInside = navMobile.contains(event.target as Node);
+        const isButtonClick = btnMobile.contains(event.target as Node);
+
+        if (!isClickInside && !isButtonClick) {
+            navMobile.classList.add('translate-x-full');
+            navMobile.classList.remove('translate-x-0');
+        }
+    });
+
+    document.querySelectorAll('.nav-item-link').forEach((item) => {
+        item.addEventListener('click', () => {
+            navMobile.classList.add('translate-x-full');
+            navMobile.classList.remove('translate-x-0');
+        });
+    });
+</script>
