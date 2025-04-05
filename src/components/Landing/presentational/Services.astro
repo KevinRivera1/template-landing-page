@@ -1,0 +1,36 @@
+---
+import { Service } from '@data/service.ts';
+import ArrowUp from '@assets/svg/arrow-up.svg';
+---
+
+<section class="py-20">
+    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-4">
+      
+      <div class="flex flex-col justify-center items-center gap-8 text-center lg:text-left">
+        <h2 class="text-5xl font-bold leading-snug">
+          Trusted service, <span class="text-[#8D959D] font-normal">for your various needs</span>
+          <div class="btn-service flex items-center justify-center lg:justify-start mt-6">
+              <a href="/" aria-label="Get in touch service" class="flex items-center justify-between gap-x-2 px-6 py-3 bg-[#00D47E] text-white rounded-4xl text-[.9rem] hover:bg-green-600 transition">
+                Get in touch <ArrowUp class="size-5"/>
+              </a>
+          </div>
+        </h2>
+  
+        <div class="flex flex-wrap justify-center lg:justify-start gap-6 mt-8">
+          {
+            Service.map((item) => (
+              <article class="flex flex-col items-center lg:items-start  gap-2 p-4 shadow-md border border-gray-200 rounded-xl max-w-[14rem]">
+                <span class="text-[#8D959D] font-medium">{item.id}</span>
+                <h3 class="text-xl font-semibold">{item.name}</h3>
+                <a href="/" class="text-sm underline text-blue-500 hover:text-blue-700">View Details</a>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+  
+      <figure class="w-full h-full bg-cover bg-center rounded-xl shadow-lg min-h-[300px] lg:min-h-0 aspect-video lg:aspect-auto" style="background-image: url('https://images.unsplash.com/photo-1676337167328-5491d30de8f4?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+      </figure>
+    </div>
+  </section>
+  
