@@ -7,6 +7,7 @@ import Radar from '@assets/svg/radar.svg';
 
 export const Cards = [
 	{
+		id: 1,
 		image: Layer.src,
 		title: 'Layered security',
 		description:
@@ -14,6 +15,7 @@ export const Cards = [
 		link: 'articles/understanding-typescript.html',
 	},
 	{
+		id: 2,
 		image: Quality.src,
 		title: 'Quality control of each part',
 		description:
@@ -21,6 +23,7 @@ export const Cards = [
 		link: 'articles/javascript-vs-typescript.html',
 	},
 	{
+		id: 3,
 		image: Message.src,
 		title: 'Reliable customer service',
 		description:
@@ -28,6 +31,7 @@ export const Cards = [
 		link: 'articles/building-react-app-with-typescript.html',
 	},
 	{
+		id: 4,
 		image: Maintenance.src,
 		title: 'Maintenance manual book',
 		description:
@@ -35,6 +39,7 @@ export const Cards = [
 		link: 'articles/building-react-app-with-typescript.html',
 	},
 	{
+		id: 5,
 		image: Delivered.src,
 		title: 'Delivered safely',
 		description:
@@ -42,6 +47,7 @@ export const Cards = [
 		link: 'articles/building-react-app-with-typescript.html',
 	},
 	{
+		id: 6,
 		image: Radar.src,
 		title: 'Based on artificial intelligence',
 		description:
