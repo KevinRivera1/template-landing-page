@@ -22,7 +22,7 @@ import { Service } from '@data/service.ts';
               <article class="flex flex-col items-center lg:items-start  gap-2 p-4 shadow-md border border-gray-200 rounded-xl max-w-[14rem]">
                 <span class="text-[#8D959D] font-medium">{item.id}</span>
                 <h3 class="text-xl font-semibold">{item.name}</h3>
-                <a href="/" class="text-sm underline text-blue-500 hover:text-blue-700">View Details</a>
+                <a href="/" aria-label={item.name} class="text-sm underline text-blue-500 hover:text-blue-700">View Details</a>
               </article>
             ))
           }
