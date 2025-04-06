@@ -21,7 +21,7 @@ import { Menu } from '@data/menu.ts';
                 ))}
             </ul>
         </nav>
-        <button id="btn-mobile-open" class="lg:hidden cursor-pointer">
+        <button id="btn-mobile-open" class="lg:hidden cursor-pointer" aria-label="botón abrir Menu">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-align-right">
                 <path d="M21 12H9"/><path d="M21 18H7"/><path d="M21 6H3"/>
             </svg>
@@ -32,7 +32,7 @@ import { Menu } from '@data/menu.ts';
 <!-- Menú móvil -->
 <nav id="nav-mobile" class="nav-mobile fixed top-0 right-0 z-40 text-[#1E1E1E] bg-white w-40 h-full rounded-l-xl shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
     <div class="bnt-close flex justify-end p-4">
-        <button id="btn-mobile-close" class="lg:hidden cursor-pointer">
+        <button id="btn-mobile-close" class="lg:hidden cursor-pointer" aria-label="botón cerrar Menu">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-x-icon lucide-circle-x"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></svg>
         </button>
     </div>
