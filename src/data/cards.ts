@@ -1,8 +1,8 @@
-import Layer from '@assets/svg/layer.svg';
-import Quality from '@assets/svg/quality.svg';
-import Message from '@assets/svg/message.svg';
 import Maintenance from '@assets/svg/book.svg';
 import Delivered from '@assets/svg/delivered.svg';
+import Layer from '@assets/svg/layer.svg';
+import Message from '@assets/svg/message.svg';
+import Quality from '@assets/svg/quality.svg';
 import Radar from '@assets/svg/radar.svg';
 
 export const Cards = [
