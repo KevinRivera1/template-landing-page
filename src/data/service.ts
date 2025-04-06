@@ -1,18 +1,18 @@
 export const Service = [
 	{
-		id: 1,
+		id: "01",
 		name: 'Solar panels for home',
 	},
 	{
-		id: 2,
+		id: "02",
 		name: 'Solar panels for industry',
 	},
 	{
-		id: 3,
+		id: "03",
 		name: 'Solar panels for chargers',
 	},
 	{
-		id: 4,
+		id: "04",
 		name: 'wind power generator',
 	},
 ];
