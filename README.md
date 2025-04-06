@@ -1,48 +1,63 @@
-# Astro Starter Kit: Basics
+# Landing Page Template en Astrojs
+
+¡Bienvenido a la Landing Page Template! Este proyecto es una plantilla lista para usar, ideal para crear páginas web de aterrizaje (landing pages) de forma rápida y sencilla. Está diseñada para que cualquier usuario pueda personalizarla y desplegarla con facilidad.
+
+![Vista previa de la landing page](ruta/a/tu-imagen-de-vista-previa.png)
+
+## Tabla de Contenidos
+
+- [Características](#características)
+- [Demo](#demo)
+- [Instalación](#instalación)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Comandos](#comandos)
+- [Personalización](#personalización)
+- [Contribuciones](#contribuciones)
+
+## Características
+
+- **Fácil de usar:** Plantilla lista para ser personalizada sin complicaciones.
+- **Responsive:** Diseño adaptable a dispositivos móviles, tabletas y escritorio.
+- **Optimizada para SEO:** Estructura semántica y buenas prácticas para posicionamiento.
+- **Integraciones:** Compatible con herramientas y frameworks modernos.
+- **Despliegue sencillo:** Instrucciones claras para desplegar tu landing page en producción.
+
+## Demo
+
+Puedes ver una demo en vivo de la landing page en el siguiente enlace:
+
+[Ver Demo](https://tu-demo-url.com)
+
+## Instalación
+
+Para comenzar, clona el repositorio y sigue los pasos a continuación:
+
+### Con Bun
 
 ```sh
 bun create astro@latest -- --template basics
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+### Comandos
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
+Todos los comandos se ejecutan desde la raiz del proyecto en tu terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
+| bun install               | Instala las dependencias del proyecto                     |
+| bun dev                   | Inicia el servidor de desarrollo local en localhost:4321  |
+| bun build                 | Compila el sitio para producción (./dist/)                |
+| bun preview               | Previsualiza la compilación antes de desplegar            |
+| bun astro ...             | Ejecuta comandos de la CLI de Astro (ej. astro add)       |
+| bun astro -- --help       | Muestra la ayuda de la CLI de Astro                       |
 
-## 👀 Want to learn more?
+### Contribuciones
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+¡Las contribuciones son bienvenidas! Si deseas mejorar esta plantilla, por favor sigue estos pasos:
+
+1. Haz un fork del repositorio.
+2. Crea una rama con tu nueva funcionalidad (git checkout -b feature/nueva-funcionalidad).
+3. Realiza tus cambios y haz commit (git commit -m 'Añadir nueva funcionalidad').
+4. Envía un pull request.
+
+Agradecemos cualquier sugerencia o mejora.
