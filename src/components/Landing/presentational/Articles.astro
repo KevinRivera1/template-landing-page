@@ -1,7 +1,7 @@
 ---
 import { Cards } from '@data/cards';
 ---
-<section class="bg-slate-100 py-20">
+<section class="bg-slate-100 py-20" aria-label="Nuestros servicios" role="region">
     <div class="section-title container mx-auto flex items-center justify-center text-center p-2 md:px-0 mb-10">
         <h2 class="text-pretty text-5xl w-[50rem] leading-snug"><strong>We offer quality,</strong><span class="text-[#8D959D]">whit the best Materials and service</span></h2>
     </div>
@@ -9,7 +9,7 @@ import { Cards } from '@data/cards';
         {
           Cards.map((card) => {
             return (
-              <article class="w-full min-h-max p-4 flex flex-col bg-white shadow rounded-md overflow-x-hidden">
+              <article class="w-full min-h-max p-4 flex flex-col bg-white shadow rounded-md overflow-x-hidden" role="region" aria-labelledby={`card-${card.id}`}>
                 <figure class="w-full h-[6.25rem] flex justify-center items-center">
                   <img class="aspect-square size-10 text-green-500" src={card.image} alt={card.title} width="40" height="40" />
                 </figure>

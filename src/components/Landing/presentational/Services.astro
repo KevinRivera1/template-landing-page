@@ -11,7 +11,7 @@ import { Service } from '@data/service.ts';
           Trusted service, <span class="text-[#8D959D] font-normal">for your various needs</span>
           <div class="btn-service flex items-center justify-center lg:justify-start mt-6">
               <a href="/" aria-label="Get in touch service" class="flex items-center justify-between gap-x-2 px-6 py-3 bg-[#00D47E] text-white rounded-4xl text-[.9rem] hover:bg-green-600 transition">
-                Get in touch <ArrowUp class="inline-block size-5"/>
+                Get in touch <ArrowUp class="inline-block size-5" aria-hidden="true"/>
               </a>
           </div>
         </h2>
@@ -19,7 +19,7 @@ import { Service } from '@data/service.ts';
         <div class="flex flex-wrap justify-center lg:justify-start gap-6 mt-8">
           {
             Service.map((item) => (
-              <article class="flex flex-col items-center lg:items-start  gap-2 p-4 shadow-md border border-gray-200 rounded-xl max-w-[14rem]">
+              <article class="flex flex-col items-center lg:items-start  gap-2 p-4 shadow-md border border-gray-200 rounded-xl max-w-[14rem]" aria-labelledby={`service-${item.id}`}>
                 <span class="text-[#8D959D] font-medium">{item.id}</span>
                 <h3 class="text-xl font-semibold">{item.name}</h3>
                 <a href="/" aria-label={item.name} class="text-sm underline text-blue-500 hover:text-blue-700">View Details</a>
