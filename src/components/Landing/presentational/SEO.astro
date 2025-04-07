@@ -1,0 +1,66 @@
+---
+interface Props {
+	title: string;
+	description: string;
+	image: string;
+	url?: string;
+	keywords: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const {
+	title,
+	description,
+	image,
+	keywords,
+	url = 'https://template-landing-page.vercel.app/',
+} = Astro.props as Props;
+---
+
+<!-- Primary Meta Tags -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords} />
+
+<link rel="icon" type="image/svg+xml" href="src/assets/svg/logo.svg" />
+<link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="canonical" href={canonicalURL.href} />
+<meta name="robots" content="index, follow" />
+
+<meta name="theme-color" content="#000000" />
+<meta name="author" content="Kevin Rivera" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:site_name" content={title} />
+<meta property="og:type" content="website" />
+<meta property="og:url" content={url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta
+  property="og:image"
+  itemprop="image"
+  content={new URL(image, Astro.site).href}
+/>
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL(image, Astro.site).href} />
+
+<!-- Datos estructurados -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: title,
+    description: description,
+    url: url,
+    image: new URL(image, Astro.site).href,
+  })}
+/>
