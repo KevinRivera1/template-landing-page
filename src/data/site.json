@@ -1,4 +1,28 @@
 {
 	"_id": "astro-landing-template",
-	"siteTitle": "Astro Landing Template"
+	"siteTitle": "Astro Landing Template",
+	"siteDescription": "A simple landing page template built with Astro.",
+	"siteUrl": "https://astro-landing-template.com",
+	"siteImage": "/images/preview.png",
+	"siteKeywords": [
+		"Astro",
+		"Landing Page",
+		"Template",
+		"Static Site Generator",
+		"Web Development",
+		"Frontend Development",
+		"JavaScript",
+		"HTML",
+		"CSS",
+		"Responsive Design",
+		"SEO",
+		"Performance",
+		"Accessibility",
+		"Open Source",
+		"Web Design",
+		"Web App",
+		"Web Template",
+		"Web Development Template",
+		"Web Development Framework"
+	]
 }
