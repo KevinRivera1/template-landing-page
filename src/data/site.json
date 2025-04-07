@@ -1,10 +1,4 @@
 {
 	"_id": "astro-landing-template",
-	"siteTitle": "Astro Landing Template",
-	"sections": {
-		"hero": "hero_1",
-		"features": ["feature_1", "feature_2", "feature_3"],
-		"testimonials": ["testimonial_1"],
-		"pricing": ["pricing_1"]
-	}
+	"siteTitle": "Astro Landing Template"
 }
