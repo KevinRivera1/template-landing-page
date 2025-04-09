@@ -29,7 +29,7 @@
 
 Puedes ver una demo en vivo de la landing page en el siguiente enlace:
 
-[Ver Demo](https://tu-demo-url.com)
+[Ver Demo](https://template-landing-page.vercel.app/)
 
 ## Instalación
 
