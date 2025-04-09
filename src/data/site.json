@@ -3,7 +3,7 @@
 	"siteTitle": "Astro Landing Template",
 	"siteDescription": "A simple landing page template built with Astro.",
 	"siteUrl": "https://astro-landing-template.com",
-	"siteImage": "/images/preview.png",
+	"siteImage": "images/branding.jpg",
 	"siteKeywords": [
 		"Astro",
 		"Landing Page",
