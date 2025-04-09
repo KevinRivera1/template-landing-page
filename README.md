@@ -2,7 +2,8 @@
 
 ¡Bienvenido a la Landing Page Template! Este proyecto es una plantilla lista para usar, ideal para crear páginas web de aterrizaje (landing pages) de forma rápida y sencilla. Está diseñada para que cualquier usuario pueda personalizarla y desplegarla con facilidad.
 
-![Vista previa de la landing page](ruta/a/tu-imagen-de-vista-previa.png)
+![Vista previa de la landing page](public/images/Macbook-Air-1559x975.png)
+![Vista previa de la landing page](public/images/iPhone-14-Pro-393x852.png)
 
 ## Tabla de Contenidos
 
