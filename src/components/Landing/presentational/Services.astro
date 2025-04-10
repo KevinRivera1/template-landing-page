@@ -3,14 +3,14 @@ import ArrowUp from '@assets/svg/arrow-up.svg';
 import { serviceData } from '@data/service.ts';
 ---
 
-<section class="py-20">
+<section class="py-20 fade-in">
     <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 px-4">
       
       <div class="flex flex-col justify-center items-center gap-8 text-center lg:text-left">
         <h2 class="text-5xl font-bold leading-snug">
-          {serviceData.header.title} <span class="text-[#8D959D] font-normal">{serviceData.header.highlight}</span>
+          {serviceData.header.title} <span class="text-[#4E525A] font-normal">{serviceData.header.highlight}</span>
           <div class="btn-service flex items-center justify-center lg:justify-start mt-6">
-              <a href={serviceData.button.url} aria-label={serviceData.button.ariaLabel} class="flex items-center justify-between gap-x-2 px-6 py-3 bg-green-600 text-white rounded-4xl text-[.9rem] hover:bg-[#00D47E] active:bg-[#00D47E] transition">
+              <a href={serviceData.button.url} aria-label={serviceData.button.ariaLabel} class="flex items-center justify-between gap-x-2 px-6 py-3 bg-[#00663D] text-white rounded-4xl text-[.9rem] hover:bg-[#00D47E] active:bg-[#00D47E] transition">
                 {serviceData.button.text} <ArrowUp class="inline-block size-5" aria-hidden="true"/>
               </a>
           </div>
@@ -20,9 +20,9 @@ import { serviceData } from '@data/service.ts';
           {
             serviceData.services.map((item) => (
               <article class="flex flex-col items-center lg:items-start  gap-2 p-4 shadow-md border border-gray-200 rounded-xl max-w-[14rem]" aria-labelledby={`service-${item.id}`}>
-                <span class="text-[#8D959D] font-medium">{item.id}</span>
+                <span class="text-[#4E525A] font-medium">{item.id}</span>
                 <h3 class="text-xl font-semibold">{item.name}</h3>
-                <a href={item.detailsUrl} aria-label={item.name} class="text-sm underline text-blue-500 hover:text-blue-700">{item.detailsText}</a>
+                <a href={item.detailsUrl} aria-label={item.name} class="text-sm underline text-blue-600 hover:text-blue-800">{item.detailsText}</a>
               </article>
             ))
           }
@@ -33,5 +33,4 @@ import { serviceData } from '@data/service.ts';
       style={`background-image: url('${serviceData.featureImage.url}');`} aria-label={serviceData.featureImage.alt} >
       </figure>
     </div>
-  </section>
-  
+</section>
