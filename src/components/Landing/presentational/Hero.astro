@@ -6,7 +6,7 @@ import { hero } from '@data/hero';
 {
   hero.map((item) => (
     <section
-      class="hero h-[90vh]"
+      class="hero fade-in h-[90vh]"
       aria-label="Sección de bienvenida"
       role="region"
     >
@@ -15,14 +15,14 @@ import { hero } from '@data/hero';
           class="relative w-full h-full flex items-center justify-center bg-blend-overlay bg-black/20 bg-cover bg-center md:rounded-xl shadow-lg overflow-hidden p-6"
           style={{ backgroundImage: `url(${item.image})` }}
         >
-          <div class="relative z-10 text-center text-white max-w-2xl p-6 bg-white/10 backdrop-blur-md rounded-xl shadow-lg">
+          <div class="relative z-10 text-center text-white max-w-2xl p-6 bg-white/4 backdrop-blur-md rounded-xl shadow-lg">
             <h1 class="text-5xl font-extrabold tracking-tight drop-shadow-lg">
               {item.title}
             </h1>
             <p class="mt-3 text-lg font-medium drop-shadow-md">
               {item.subtitle}
             </p>
-            <button class="mt-6 px-6 py-3 bg-green-600 hover:bg-[#00D47E] active:bg-[#00D47E] transition-colors text-white font-semibold rounded-full shadow-md cursor-pointer">
+            <button class="mt-6 px-6 py-3 bg-[#00663D] hover:bg-[#00D47E] active:bg-[#00D47E] transition-colors text-white font-semibold rounded-full shadow-md cursor-pointer">
               {item.cta.text}
               <ArrowUp class="inline-block ml-2 size-5" aria-hidden="true" />
             </button>
