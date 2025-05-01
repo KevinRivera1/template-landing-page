@@ -1,0 +1,25 @@
+---
+import { Cards } from '@data/cards';
+---
+<section class="bg-slate-100 py-20" aria-label="Nuestros servicios" role="region">
+    <div class="section-title container mx-auto flex items-center justify-center text-center p-2 md:px-0 mb-10">
+        <h2 class="text-pretty text-5xl w-[50rem] leading-snug"><strong>We offer quality,</strong><span class="text-[#4E525A]">whit the best Materials and service</span></h2>
+    </div>
+    <div class="wrapper container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 p-2 md:px-0">
+        {
+          Cards.map((card) => {
+            return (
+              <article class="w-full min-h-max p-4 flex flex-col bg-white shadow rounded-md overflow-x-hidden" role="region" aria-labelledby={`card-${card.id}`}>
+                <figure class="w-full h-[6.25rem] flex justify-center items-center">
+                  <img class="aspect-square size-10 text-green-500" src={card.image} alt={card.title} width="40" height="40" loading="lazy" decoding="async"/>
+                </figure>
+                <div class="flex flex-col gap-y-2 justify-between flex-1">
+                  <h3 class="text-xl font-bold">{card.title}</h3>
+                  <p>{card.description}</p>
+                </div>
+              </article>
+            );
+          })
+        }
+      </div>
+</section>

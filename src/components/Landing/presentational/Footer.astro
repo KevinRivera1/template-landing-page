@@ -1,10 +1,85 @@
 ---
+import ArrowUp from '@assets/svg/arrow-up.svg';
+import Check from '@assets/svg/check.svg';
+import Facebook from '@assets/svg/facebook.svg';
+import LinkedIn from '@assets/svg/linkedIn.svg';
+import Logo from '@assets/svg/logo.svg';
+import Reddit from '@assets/svg/reddit.svg';
+import X from '@assets/svg/x.svg';
+import { footerData } from '@data/footer.ts';
+import { Menu } from '@data/menu.ts';
 const year = new Date().getFullYear();
+const socialIcons = {
+	LinkedIn: LinkedIn,
+	X: X,
+	Facebook: Facebook,
+	Reddit: Reddit,
+} as const;
 ---
-<footer>
-    <div class="wrapper container mx-auto">
-        <div class="footer-content text-center font-bold text-blue-700">
-            <p class="text-pretty text-sm">&copy; {year} CREADO POR KEVIN RIVERA 👌</p>
+<footer class="bg-black text-white text-pretty" aria-label="Footer" role="contentinfo">
+    <div class="wrapper container mx-auto px-5">
+
+        <div class="footer-header flex flex-col gap-y-6 md:gap-y-0 md:flex-row py-20">
+            <div class="title">
+                <h2 class="text-4xl font-semibold text-start">{footerData.header.title} <span class="text-[#8D959D]">{footerData.header.highlight}</span></h2>
+                <div class="experience flex flex-wrap gap-x-6 mt-4">
+                    {
+                        footerData.experience.map((exp) => (
+                            <small class="font-semibold text-start flex items-center gap-x-2"><Check class="size-5 fill-[#00D47E] text-black" aria-hidden="true"/>{exp}</small>
+                        ))
+                    }
+                </div>
+            </div>
+            <div class="content flex flex-col gap-4">
+                <p class="text-start text-sm font-semibold text-pretty">{footerData.content.description}</p>
+                <div class="btn-footer mt-3">
+                    <a class="px-6 py-3 bg-white text-black rounded-3xl" href={footerData.content.button.url} aria-label={footerData.content.button.ariaLabel} role="button">
+                        {footerData.content.button.text} <ArrowUp class="inline-block ml-2" aria-hidden="true" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-nav flex flex-wrap justify-between items-center py-4">
+
+            <div class="footer-logo flex flex-1 items-center justify-start ">
+                <a href={footerData.logoLink.url} aria-label={footerData.logoLink.ariaLabel}>
+                    <Logo class="size-10" aria-hidden="true"/>
+                </a>
+            </div>
+
+            <nav class="gap-x-6 text-sm font-semibold hidden md:flex" aria-label="Menú de navegación">
+                {
+                    Menu.map((item) => (
+                        <a class="hover:underline active:underline" href={item.link} aria-label={item.name}>
+                            {item.name}
+                        </a>
+                    ))
+                }
+            </nav>
+
+            <div class="socials flex flex-1 gap-x-4 justify-end" aria-label="Social media">
+                {footerData.socials.map(social => {
+                    const Icon = socialIcons[social.icon as keyof typeof socialIcons];
+                    return (
+                      <a href={social.url} aria-label={social.name}>
+                        <Icon class="size-6" aria-hidden="true" />
+                      </a>
+                    );
+                  })}
+            </div>
+
+        </div>
+
+        <div class="footer-content font-semibold text-sm py-6 flex flex-col md:flex-row items-center justify-between border-t-1 border-[#8D959D]">
+            <p class="text-pretty text-sm">&copy; {year} {footerData.copyright.text}</p>
+            <div class="privacity flex gap-x-6">
+                {footerData.legal.map(legal => (
+                    <a class="hover:underline active:underline" href={legal.link} aria-label={legal.name}>
+                      {legal.name}
+                    </a>
+                  ))}
+            </div>
         </div>
     </div>
 </footer>
