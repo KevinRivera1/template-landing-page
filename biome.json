@@ -42,7 +42,7 @@
 	},
 	"overrides": [
 		{
-			"include": ["**/*.astro"],
+			"include": ["*.astro"],
 			"formatter": {
 				"indentStyle": "tab",
 				"indentWidth": 2
