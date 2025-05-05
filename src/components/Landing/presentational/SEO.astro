@@ -14,7 +14,7 @@ const {
 	description,
 	image,
 	keywords,
-	url = 'https://template-landing-page.vercel.app/',
+	url = 'template-landing-page-xi.vercel.app',
 } = Astro.props as Props;
 ---
 
@@ -22,16 +22,14 @@ const {
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="description" content={description} />
 <meta name="keywords" content={keywords} />
-
-<link rel="icon" type="image/svg+xml" href="src/assets/svg/logo.svg" />
-<link rel="sitemap" href="./sitemap-index.xml" />
-<link rel="canonical" href={canonicalURL.href} />
-<meta name="robots" content="index, follow" />
-
-<meta name="theme-color" content="#000000" />
 <meta name="author" content="Kevin Rivera" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#000000" />
+<link rel="canonical" href={canonicalURL.href} />
+<link rel="sitemap" href="./sitemap-index.xml" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:site_name" content={title} />
