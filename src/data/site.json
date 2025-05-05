@@ -1,8 +1,8 @@
 {
 	"_id": "astro-landing-template",
 	"siteTitle": "Astro Landing Template",
-	"siteDescription": "A simple landing page template built with Astro.",
-	"siteUrl": "https://astro-landing-template.com",
+	"siteDescription": "A landing page template created with Astro.js, ready to use and customize. Ideal for developers and creators looking for a fast, optimized and easy to implement solution.",
+	"siteUrl": "template-landing-page-xi.vercel.app",
 	"siteImage": "images/branding.jpg",
 	"siteKeywords": [
 		"Astro",
